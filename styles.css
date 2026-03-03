@@ -1,6 +1,6 @@
 .banner{
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("https://i.pinimg.com/736x/a7/70/3b/a7703bbbe6f3f30fcc266440b021fb6f.jpg");
+    height: 50vh;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("https://i.pinimg.com/736x/a7/70/3b/a7703bbbe6f3f30fcc266440b021fb6f.jpg");
     background-size: cover;
     background-position: center;
 }
