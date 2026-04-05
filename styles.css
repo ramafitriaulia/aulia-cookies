@@ -1,5 +1,5 @@
 .banner{
-    height: 50vh;
+    height: 70vh;
     background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("https://i.pinimg.com/736x/a7/70/3b/a7703bbbe6f3f30fcc266440b021fb6f.jpg");
     background-size: cover;
     background-position: center;
@@ -105,4 +105,110 @@
 
 .hovered-card:hover {
     transform: translateY(-5px);
+}
+
+.col-md-6 img{
+    width: 300px !important;
+    height: auto;
+    display: black;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: rgba(0,0,0,0.7);
+    border: none;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+.col-md-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.promo-section {
+    animation: fadeSlideIn 0.4s ease both;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.promo-section .hovered-card {
+    opacity: 0;
+    animation: fadeSlideIn 0.4s ease both;
+}
+.promo-section .hovered-card:nth-child(1) {
+    animation-delay: 0.05s;
+}
+.promo-section .hovered-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.promo-section .hovered-card:nth-child(3) {
+    animation-delay: 0.15s;
+}
+.promo-section .hovered-card:nth-child(4) {
+    animation-delay: 0.2s;
+}
+.promo-section .hovered-card:nth-child(5) {
+    animation-delay: 0.25s;
+}
+.promo-section .hovered-card:nth-child(6) {
+    animation-delay: 0.3s;
+}
+.promo-section .hovered-card:nth-child(7) {
+    animation-delay: 0.35s;
+}
+.promo-section .hovered-card:nth-child(8) {
+    animation-delay: 0.4s;
+}
+
+.filter-btn {
+    transition: background-color 0.25s ease, color 025s ease, transform 0.15s ease, box-shadow 0.25s ease;
+}
+.filter-btn:active {
+    transform: scale(0.95);
+}
+.filter-btn:active {
+    box-shadow: 0 4px 14px rgba(255, 193, 7, 0.45);
+}
+
+/* CSS tambahan agar layout rapi sesuai script awal */
+      .p-banner {
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=1350&q=80');
+        background-size: cover;
+        background-position: center;
+        height: 400px;
+      }
+      /* Kunci kerapihan: Gambar seragam & Kartu sama tinggi */
+      .card-img-top {
+        height: 200px;
+        object-fit: cover;
+      }
+      .card {
+        height: 100%;
+      }
+      .footer {
+        background-color: #4a2c1d;
+      }
+      .social-icon {
+        color: white;
+        font-size: 1.5rem;
+      }
+
+.land {
+    aspect-ratio: 3 / 4;
 }

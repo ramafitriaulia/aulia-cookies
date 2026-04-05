@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AuliaCookies - Promo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Tambahan CSS sederhana agar tampilan lebih rapi */
+    .banner {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=1528&auto=format&fit=crop');
+      background-size: cover;
+      height: 40vh;
+    }
+    .hovered-card .card {
+      transition: transform 0.3s;
+    }
+    .hovered-card .card:hover {
+      transform: translateY(-10px);
+    }
+    .footer {
+      background-color: #6b3e26;
+    }
+    .social-icon i {
+      font-size: 1.5rem;
+      color: white;
+    }
+
+    .filter-btn {
+      transition: 
+          background-color 0.25s ease,
+          color 0.25s ease,
+          transform 0.15s ease,
+          box-shadow 0.25s ease;
+    }
+
+    .filter-btn:active {
+        transform: scale(0.95);
+    }
+    .filter-btn:active {
+        box-shadow: 0 4px 14px rgba(255, 193, 7, 0.45);
+    }
+    .card-hover {
+    transition: transform 0.3s ease;
+    }
+    .card-hover:hover {
+        transform: translateY(-10px);
+    }
+
+
+
+    /* Promo */
+    .promo-section {
+        animation: fadeSlideIn 0.4s ease both;
+    }
+
+    @keyframes fadeSlideIn {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .promo-section .hovered-card {
+        opacity: 0;
+        animation: fadeSlideIn 0.4s ease forwards;
+    }
+
+    .promo-section .hovered-card:nth-child(1) {
+        animation-delay: 0.05s;
+    }
+    .promo-section .hovered-card:nth-child(2) {
+        animation-delay: 0.1s;
+    }
+    .promo-section .hovered-card:nth-child(3) {
+        animation-delay: 0.15s;
+    }
+    .promo-section .hovered-card:nth-child(4) {
+        animation-delay: 0.2s;
+    }
+    .promo-section .hovered-card:nth-child(5) {
+        animation-delay: 0.25s;
+    }
+    .promo-section .hovered-card:nth-child(6) {
+        animation-delay: 0.3s;
+    }
+    .promo-section .hovered-card:nth-child(7) {
+        animation-delay: 0.35s;
+    }
+    .promo-section .hovered-card:nth-child(8) {
+        animation-delay: 0.4s;
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #6b3e26ac;">
+    <div class="container-fluid mx-5">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <a class="navbar-brand me-auto" href="#" style="color: aliceblue;">Aulia's Sweet Cookies</a>
+        <ul class="navbar-nav">
+          <li class="nav-item me-5">
+            <a class="nav-link" href="index.html" style="color: aliceblue;">Home</a>
+          </li>
+          <li class="nav-item me-5">
+            <a class="nav-link" href="produk.html" style="color: aliceblue;">Produk</a>
+          </li>
+          <li class="nav-item me-5">
+            <a class="nav-link active fw-bold" href="promo.html" style="color: aliceblue;">Promo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="keranjang.html" style="color: aliceblue;"><i class="bi bi-cart"></i> Keranjang</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid banner d-flex align-items-center justify-content-center">
+    <div class="container">
+      <h1 class="text-light text-center display-4 fw-bold mb-1">Sweet Cookies Promo</h1>
+      <p class="text-light text-center fs-5 mb-5">Nikmati cookies lezat dengan berbagai promo menarik</p>
+    </div>
+  </div>
+
+  <div class="container py-5">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-6 col-md-3 col-lg-2 mb-2">
+          <div class="btn btn-outline-primary w-100 filter-btn active" data-bs-target="#semuaPromo">Semua Promo</div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2 mb-2">
+          <div class="btn btn-outline-primary w-100 filter-btn" data-bs-target="#promoDiskon">Promo Diskon</div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2 mb-2">
+          <div class="btn btn-outline-primary w-100 filter-btn" data-bs-target="#promoBonus">Promo Bonus</div>
+        </div>
+      </div>
+
+      <div class="promo-section" id="semuaPromo">
+        <div class="row">
+          <div class="col-sm-6 col-lg-3 hovered-card mb-4">
+            <div class="card h-100">
+              <img src="choco.jpg" class="card-img-top land" alt="Choco Lava">
+              <div class="card-body">
+                <h5 class="card-title">Double Choco Lava Bites</h5>
+                <p class="card-text text-muted">Cookies lembut dengan isian coklat lumer disetiap gigitan.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-3 hovered-card mb-4">
+            <div class="card h-100">
+              <img src="https://i.pinimg.com/736x/91/0d/06/910d06632e1c65314c3491a3a077b3e8.jpg" class="card-img-top land" alt="Artisanal Pistachio">
+              <div class="card-body">
+                <h5 class="card-title">Artisanal Pistachio</h5>
+                <p class="card-text text-muted">Cookies pistachio renyah dengan rasa gurih lembut istimewa.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-3 hovered-card mb-4">
+            <div class="card h-100">
+              <img src="https://i.pinimg.com/1200x/41/be/89/41be89de527480d5004d67744326a59e.jpg" class="card-img-top land" alt="Cinnamon Sugar">
+              <div class="card-body">
+                <h5 class="card-title">Cinnamon Sugar Cookies</h5>
+                <p class="card-text text-muted">Cookie renyah dengan rasa kayu manis yang menggoda.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-3 hovered-card mb-4">
+            <div class="card h-100">
+              <img src="https://i.pinimg.com/1200x/10/21/12/102112c2218b0e644bec661ddb3a8446.jpg" class="card-img-top land" alt="Nutty Signature">
+              <div class="card-body">
+                <h5 class="card-title">The Nutty Signature</h5>
+                <p class="card-text text-muted">Cookies renyah dengan kacang pilihan dan rasa gurih.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-3 hovered-card mb-4">
+            <div class="card h-100">
+              <img src="https://i.pinimg.com/736x/fd/a5/4d/fda54d5ca022b831819de50297cfa652.jpg" class="card-img-top land" alt="Velvet Bloom">
+              <div class="card-body">
+                <h5 class="card-title">Velvet Bloom Bites</h5>
+                <p class="card-text text-muted">Cookies red velvet lembut dengan rasa manis gigitan.</p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-sm-6 col-lg-3 hovered-card mb-4">
+            <div class="card h-100">
+              <img src="https://i.pinimg.com/1200x/74/67/22/7467222888ea10e2079a29c8f373c9e6.jpg" class="card-img-top land" alt="GreenCrumb">
+              <div class="card-body">
+                <h5 class="card-title">GreenCrumb Cookie</h5>
+                <p class="card-text text-muted">Cookies renyah dengan rasa manis nikmat digigitan.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-3 hovered-card mb-4">
+            <div class="card h-100">
+              <img src="https://i.pinimg.com/1200x/ae/c7/c9/aec7c9b1f76b9de2ae325070009e73f1.jpg" class="card-img-top land" alt="Purple Crinkle">
+              <div class="card-body">
+                <h5 class="card-title">Purple Crinkle Cookies</h5>
+                <p class="card-text text-muted">Cookies lembut warna ungu dengan crinkle manis.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-3 hovered-card mb-4">
+            <div class="card h-100">
+              <img src="https://i.pinimg.com/1200x/da/9b/a5/da9ba55e2b6e2832c2211f51d60345b2.jpg" class="card-img-top land" alt="Strawberry">
+              <div class="card-body">
+                <h5 class="card-title">Sweet Strawberry Cookies</h5>
+                <p class="card-text text-muted">Cookies lembut dengan rasa strawberry manis setiap gigitan.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="promo-section" id="promoDiskon" style="display: none;">
+        <div class="row">
+          <div class="col-sm-6 col-lg-3 hovered-card mb-4">
+            <div class="card h-100">
+              <img src="choco.jpg" class="card-img-top land" alt="Choco Lava">
+              <div class="card-body">
+                <h5 class="card-title">Double Choco Lava Bites</h5>
+                <p class="card-text text-muted">Cookies lembut dengan isian coklat lumer disetiap gigitan.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-3 hovered-card mb-4">
+            <div class="card h-100">
+              <img src="https://i.pinimg.com/736x/91/0d/06/910d06632e1c65314c3491a3a077b3e8.jpg" class="card-img-top land" alt="Artisanal Pistachio">
+              <div class="card-body">
+                <h5 class="card-title">Artisanal Pistachio</h5>
+                <p class="card-text text-muted">Cookies pistachio renyah dengan rasa gurih lembut istimewa.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-3 hovered-card mb-4">
+            <div class="card h-100">
+              <img src="https://i.pinimg.com/1200x/41/be/89/41be89de527480d5004d67744326a59e.jpg" class="card-img-top land" alt="Cinnamon Sugar">
+              <div class="card-body">
+                <h5 class="card-title">Cinnamon Sugar Cookies</h5>
+                <p class="card-text text-muted">Cookie renyah dengan rasa kayu manis yang menggoda.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-3 hovered-card mb-4">
+            <div class="card h-100">
+              <img src="https://i.pinimg.com/1200x/10/21/12/102112c2218b0e644bec661ddb3a8446.jpg" class="card-img-top land" alt="Nutty Signature">
+              <div class="card-body">
+                <h5 class="card-title">The Nutty Signature</h5>
+                <p class="card-text text-muted">Cookies renyah dengan kacang pilihan dan rasa gurih.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-3 hovered-card mb-4">
+            <div class="card h-100">
+              <img src="https://i.pinimg.com/736x/fd/a5/4d/fda54d5ca022b831819de50297cfa652.jpg" class="card-img-top land" alt="Velvet Bloom">
+              <div class="card-body">
+                <h5 class="card-title">Velvet Bloom Bites</h5>
+                <p class="card-text text-muted">Cookies red velvet lembut dengan rasa manis gigitan.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="promo-section" id="promoBonus" style="display: none;">
+        <div class="row">
+          <div class="col-sm-6 col-lg-3 hovered-card mb-4">
+            <div class="card h-100">
+              <img src="https://i.pinimg.com/1200x/74/67/22/7467222888ea10e2079a29c8f373c9e6.jpg" class="card-img-top land" alt="GreenCrumb">
+              <div class="card-body">
+                <h5 class="card-title">GreenCrumb Cookie</h5>
+                <p class="card-text text-muted">Cookies renyah dengan rasa manis nikmat digigitan.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-3 hovered-card mb-4">
+            <div class="card h-100">
+              <img src="https://i.pinimg.com/1200x/ae/c7/c9/aec7c9b1f76b9de2ae325070009e73f1.jpg" class="card-img-top land" alt="Purple Crinkle">
+              <div class="card-body">
+                <h5 class="card-title">Purple Crinkle Cookies</h5>
+                <p class="card-text text-muted">Cookies lembut warna ungu dengan crinkle manis.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-3 hovered-card mb-4">
+            <div class="card h-100">
+              <img src="https://i.pinimg.com/1200x/da/9b/a5/da9ba55e2b6e2832c2211f51d60345b2.jpg" class="card-img-top land" alt="Strawberry">
+              <div class="card-body">
+                <h5 class="card-title">Sweet Strawberry Cookies</h5>
+                <p class="card-text text-muted">Cookies lembut dengan rasa strawberry manis setiap gigitan.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container-fluid py-5 footer text-light text-center">
+    <div class="container">
+      <h5 class="mb-4">Temui Kami</h5>
+      <div class="d-flex justify-content-center mb-5" style="gap: 30px">
+        <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+      </div>
+      <h5 class="mb-1">Subscribe</h5>
+      <p class="text-white-50 mb-3">Dapatkan informasi promo terbaru langsung di emailmu</p>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="input-group mb-3">
+            <input type="email" class="form-control" placeholder="Masukkan Email Anda">
+            <button class="btn btn-warning text-dark fw-bold">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-light py-4">
+    <div class="container text-center text-md-start">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold">Aulia's Cookies</h5>
+          <p class="text-white-50 small">Toko cookies dengan rasa nikmat dan harga terjangkau.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h6 class="fw-bold mb-3">Navigasi</h6>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white-50 text-decoration-none">Home</a></li>
+            <li><a href="produk.html" class="text-white-50 text-decoration-none">Produk</a></li>
+            <li><a href="promo.html" class="text-white-50 text-decoration-none">Promo</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="fw-bold mb-3">Kontak</h6>
+          <ul class="list-unstyled text-white-50 small">
+            <li><i class="bi bi-geo-alt-fill me-2"></i>Jl. Benteng Pancasila, Mojokerto</li>
+            <li><i class="bi bi-telephone-fill me-2"></i>+62 857 9723 1250</li>
+            <li><i class="bi bi-envelope-fill me-2"></i>AuliaCookies@email.com</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary mt-4">
+      <p class="text-center text-white-50 small mb-0">&copy; 2025 Aulia's Cookies. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const sections = document.querySelectorAll('.promo-section');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-bs-target').replace('#', '');
+                filterButtons.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                sections.forEach(section => {
+                    if (section.id === targetId) {
+                        section.style.display = 'block';
+                        
+                        section.style.animation = 'none';
+                        section.offsetHeight;
+                        section.style.animation = null;
+                        
+                        const cards = section.querySelectorAll('.hovered-card');
+                        cards.forEach(card => {
+                            card.style.animation = 'none';
+                            card.offsetHeight;
+                            card.style.animation = null;
+                        });
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
