@@ -212,3 +212,7 @@ button {
 .land {
     aspect-ratio: 3 / 4;
 }
+
+.portrait {
+    aspect-ratio: 3 / 4;
+}
